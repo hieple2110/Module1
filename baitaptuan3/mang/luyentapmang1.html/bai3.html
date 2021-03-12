@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3</title>
+</head>
+
+<body>
+    <script>
+        let arr = [8, 5, 9, 2, 13, 24, 54, 65, 76, 10];
+        let max = arr[0];
+        let sum = 0;
+        let avg = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            avg = sum / arr.length;
+        }
+        document.write("max: " + max + " trung binh: " + avg);
+    </script>
+
+</body>
+
+</html>

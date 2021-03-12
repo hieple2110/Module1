@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adm và eva</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td>
+                <p id="adam"></p>
+            </td>
+            <td>
+                <p id="eva"></p>
+            </td>
+            <td>
+                <p id="apple"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="eat" onclick="eatApple('adam')">
+            </td>
+            <td>
+                <input type="button" value="eat" onclick="eatApple('eva')">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+
+            isMale() {
+                return this.gender;
+            }
+
+
+            setGender(gender) {
+                this.gender = gender;
+            }
+
+            checkApple(apple) {
+                return apple.isEmpty();
+            }
+
+            eatApple(apple) {
+                if (this.checkApple(apple)) {
+                    console.log("taos he");
+                } else {
+                    console.log("cap");
+                    this.weight += 1;
+                    apple.decrease();
+                }
+            }
+
+            say(str) {
+                console.log("bala bala bêlee");
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            setName(name) {
+                this.name = name;
+
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+
+            setWeight(weight) {
+                this.weight = weight;
+            }
+        }
+
+        class Apple {
+            constructor() {
+                this.weight = 10;
+
+            }
+            decrease() {
+                this.weight -= 1;
+            }
+
+            isEmpty() {
+                if (this.weight <= 0) return true;
+                return false;
+
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+        }
+
+
+
+        let app1 = new Apple();
+        console.log(app1)
+
+        let human1 = new Human("hiep", true, 69);
+        let human2 = new Human("huong", false, 60);
+
+        human1.eatApple(app1);
+
+        let first = true;
+
+        for (; app1.getWeight() > 0;) {
+            if (first) {
+                human2.eatApple(app1);
+            } else {
+                human1.eatApple(app1);
+            }
+            first = !first
+        }
+        console.log(human1.getWeight())
+
+        console.log(human2.getWeight())
+    </script>
+</body>
+
+</html>

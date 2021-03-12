@@ -1,0 +1,15 @@
+.H1{
+    background-color: aquamarine;
+}
+#SUA {
+    border: solid;
+    text-align: left;
+    border-collapse: collapse;
+}
+table.table-left td:last-child{
+    text-align: right;
+
+}
+table{
+    width: 100%;
+}

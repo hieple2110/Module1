@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <title>game ảnh</title>
+</head>
+
+<body>
+    <div class="mot">
+        <table onclick="mau()">
+            <tr>
+                <td><img id="a1" src="./anh/551.jpg" onclick="chuyen()">
+                </td>
+            <tr>
+                <td><img id="a2" src="./anh/552.jpg" onclick="chuyen1()">
+                </td>
+            </tr>
+            <tr>
+                <td><img id="a3" src="./anh/553.jpg" onclick="chuyen2()">
+                </td>
+            </tr>
+        </table>
+        <script>
+            function chuyen() {
+                let number = Math.floor(Math.random() * 3 + 1);
+                switch (number) {
+                    case 1:
+                        document.getElementById('a1').src = './anh/551.jpg';
+                        break;
+                    case 2:
+                        document.getElementById('a1').src = './anh/noo1.jpg';
+                        break;
+                    case 3:
+                        document.getElementById('a1').src = './anh/meoo1.jpg';
+                        break;
+                }
+            }
+            function chuyen1() {
+                let number = Math.floor(Math.random() * 3 + 1);
+                switch (number) {
+                    case 1:
+                        document.getElementById('a2').src = './anh/552.jpg';
+                        break;
+                    case 2:
+                        document.getElementById('a2').src = './anh/no2o.jpg';
+                        break;
+                    case 3:
+                        document.getElementById('a2').src = './anh/meoo2.jpg';
+                        break;
+                }
+            }
+            function chuyen2() {
+                let number = Math.floor(Math.random() * 3 + 1);
+                switch (number) {
+                    case 1:
+                        document.getElementById('a3').src = './anh/553.jpg';
+                        break;
+                    case 2:
+                        document.getElementById('a3').src = './anh/no3o.jpg';
+                        break;
+                    case 3:
+                        document.getElementById('a3').src = './anh/meo3o.jpg';
+                        break;
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

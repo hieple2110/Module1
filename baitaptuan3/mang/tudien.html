@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <h1>TỪ ĐIỂN</h1><br>
+
+    <input id="v1" type="text">
+    <button onclick="dich()">Tra từ</button>
+    <div id="display"></div>
+    <script>
+        function dich() {
+            let anh = ["money", "diamond", "gold", "villa", "special aircraft", "freedom"];
+            let viet = ["tiền", "kim cương", "vàng", "biệt thự", "chuyên cơ", "tự do"];
+            let a = document.getElementById('v1').value;
+            for (let i = 0; i < anh.length; i++) {
+                if (a == viet[i]) {
+                    document.getElementById("display").innerHTML = anh[i];
+                    break;
+                }
+            }
+            for (let j = 0; j < viet.length; j++) {
+                if (a == anh[j]) {
+                    document.getElementById("display").innerHTML = viet[j];
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

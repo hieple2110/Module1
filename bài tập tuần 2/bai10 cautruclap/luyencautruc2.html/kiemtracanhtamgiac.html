@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canh tam giác</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("nhập cạnh a");
+        let b = +prompt("nhập cạnh b");
+        let c = +prompt("nhập cạnh c");
+        if (a > 0 && a + b > c && a + c > b) {
+            alert("a là cạnh của tam giác");
+        } else if (b > 0 && a + b > c && b + c > a) {
+            alert("b là cạnh của tam giác");
+        } else if (c > 0 && b + c > a && a + c > b) {
+            alert("c là cạnh của tam giác");
+        } else {
+            alert("không phải là cạnh của tam giác");
+        }
+    </script>
+</body>
+
+</html>

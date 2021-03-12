@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thêm</title>
+</head>
+
+<body>
+    <script>
+        let row = 5;
+        let colum = 5;
+        let max = 0;
+        let min = 100;
+        let maxr = 0;
+        let maxc = 0;
+        let arr = [];
+
+        sout = "<table border='1' cellspacing='0' cellpadding='3' width='250' height='250'>";
+        for (i = 0; i < 5; i++) {
+            arr[i] = new Array(0, 0, 0, 0, 0)
+            sout = sout + "<tr>";
+            for (j = 0; j < 5; j++) {
+                arr[i][j] = Math.round(Math.random() * 10);
+                sout = sout + "<td>" + arr[i][j] + "(" + i + j + ")" + "</td>";
+            }
+        }
+        sout += "</table>"
+        document.write(sout);
+
+        console.log(arr)
+
+        function findMaxArray(arr){
+            
+        }
+    </script>
+</body>
+
+</html>

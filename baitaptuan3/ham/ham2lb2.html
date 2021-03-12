@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện hàm2 bài 2</title>
+</head>
+
+<body>
+    <script>
+
+        let r = +prompt("nhập bán kính hình tròn");
+
+        function perimeterArea(a) {
+            let C = Math.round(2 * r * (Math.PI));
+            let S = Math.round(Math.pow(r, 2) * (Math.PI));
+            alert("Chu vi hình tròn: " + C);
+            alert("Diện tích hình tròn: " + S);
+        }
+
+        let result = perimeterArea(r);
+
+    </script>
+</body>
+
+</html>

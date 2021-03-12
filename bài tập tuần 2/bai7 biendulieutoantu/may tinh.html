@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+</head>
+
+<body>
+    <input type="number" id="inputNumber1">
+    <input type="number" id="inputNumber2"><br>
+    <button onclick="cong()">phép cộng</button>
+    <button onclick="tru()">phép trừ</button>
+    <button onclick="nhan()">phép nhân</button>
+    <button onclick="chia()">phép chia</button>
+    <div id="result"></div>
+    <script>
+        function cong() {
+            let inputNumber1 = +document.getElementById("inputNumber1").value;
+            let inputNumber2 = +document.getElementById("inputNumber2").value;
+            document.getElementById("result").innerHTML = ("Result Division: ") + (inputNumber1 + inputNumber2);
+        }
+        function tru() {
+            let inputNumber1 = +document.getElementById("inputNumber1").value;
+            let inputNumber2 = +document.getElementById("inputNumber2").value;
+            document.getElementById("result").innerHTML = ("Result Division: ") + (inputNumber1 - inputNumber2);
+        }
+        function nhan() {
+            let inputNumber1 = +document.getElementById("inputNumber1").value;
+            let inputNumber2 = +document.getElementById("inputNumber2").value;
+            document.getElementById("result").innerHTML = ("Result Division: ") + (inputNumber1 * inputNumber2);
+        }
+        function chia() {
+            let inputNumber1 = +document.getElementById("inputNumber1").value;
+            let inputNumber2 = +document.getElementById("inputNumber2").value;
+            document.getElementById("result").innerHTML = ("Result Division: ") + (inputNumber1 / inputNumber2)
+        }
+    </script>
+</body>
+
+</html>

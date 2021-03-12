@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện hàm2 bài 6</title>
+</head>
+
+<body>
+    <script>
+        let num = +prompt("nhập số");
+        function tesr() {
+            if (num <= 0) {
+                return false;
+            } else if (Number.isInteger(num)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let result = tesr(num);
+        alert(result);
+    </script>
+</body>
+
+</html>

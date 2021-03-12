@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng các hàm có sẵn của mảng2</title>
+</head>
+
+<body>
+    <script>
+
+        let num = prompt("nhập chuỗi");
+        let d = [];
+        let b = [];
+        for (let a = 0; a < num.length; a++) {
+            let c;
+            c = +(num[a]);
+            b.push(c);
+        }
+        for (a = 0; a < b.length; a++) {
+            if (b[a] % 2 == 0 && b[a + 1] % 2 == 0) {
+                d.push(b[a]);
+                d.push("-");
+            } else {
+                d.push(b[a]);
+            }
+        }
+        document.write(d.join(""));
+
+
+
+
+
+    </script>
+</body>
+
+</html>

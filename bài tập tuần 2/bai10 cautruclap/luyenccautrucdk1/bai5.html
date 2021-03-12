@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=sc, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("nhập điểm kiểm tra");
+        let b = +prompt("nhập điểm thi giữa kỳ");
+        let c = +prompt("nhập điểm thi cuôi kỳ");
+        let TB = (a + (b * 2) + (c * 3)) / 6
+        if (TB >= 8.5) {
+            alert("GIỎI");
+        } else if (TB >= 7 && TB < 8.5) {
+            alert("KHÁ");
+        } else if (TB >= 6.5 && TB < 7) {
+            alert("TRUNG BÌNH");
+        } else {
+            alert("YẾU");
+        }
+    </script>
+</body>
+
+</html>

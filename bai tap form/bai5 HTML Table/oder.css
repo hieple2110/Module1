@@ -1,0 +1,16 @@
+.KH{
+    border-style: solid;
+    width: 250px;
+    color: rgb(8, 15, 1);
+    background-color: rgb(222, 240, 124);
+    border-radius: 10px;
+    
+}
+#khoi {
+    width: auto;
+    height: 600px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}

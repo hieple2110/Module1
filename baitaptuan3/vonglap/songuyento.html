@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = 2;
+        let count = 0;
+        let numberLaSoNguyenTo = true;
+        while (count < 20) {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    numberLaSoNguyenTo = false;
+                    break;
+                }
+            }
+            if (numberLaSoNguyenTo) {
+                count++
+                document.write("Số nguyên tố thứ " + count + ": " + number);
+                document.write("<br>");
+                number++
+            } else {
+                number++;
+                numberLaSoNguyenTo = true;
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

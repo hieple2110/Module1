@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thuế</title>
+</head>
+
+<body>
+    <script>
+        let thunhap = +prompt("thu nhâp trong tháng");
+        if (thunhap <= 5000000) {
+            alert("Đóng thuế: " + (thunhap * 5) / 100 + "VND");
+        } else if (thunhap > 5000000 && thunhap <= 10000000) {
+            alert("Đóng thuế: " + ((thunhap * 10) / 100 - 250000) + "VND");
+        } else if (thunhap > 10000000 && thunhap <= 18000000) {
+            alert("Đóng thuế: " + ((thunhap * 15) / 100 - 750000) + "VND");
+        } else if (thunhap > 18000000 && thunhap <= 32000000) {
+            alert("Đóng thuế: " + ((thunhap * 20) / 100 - 1650000) + "VND")
+        } else if (thunhap > 32000000 && thunhap <= 52000000) {
+            alert("Đóng thuế: " + ((thunhap * 25) / 100 - 3250000) + "VND")
+        } else if (thunhap > 52000000 && thunhap <= 80000000) {
+            alert("Đóng thuế: " + ((thunhap * 30) / 100 - 5850000) + "VND")
+        } else {
+            alert("Đóng thuế: " + ((thunhap * 35) / 100 - 9850000) + "VND")
+        } s
+    </script>
+</body>
+
+</html>

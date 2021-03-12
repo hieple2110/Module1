@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("nhập số tiền hóa đơn");
+        let b = 500000;
+        if (a <= 200000) {
+            alert("Tiền nhận: " + (b + (a * 3) / 100) + " VND");
+        } else if (a > 200000 && a <= 400000) {
+            alert("Tiền nhận: " + ((b + ((a * 3) / 100)) + ((a * 5) / 100)) + " VND");
+        } else if (a > 400000) {
+            alert("Tiền nhận: " + (((b + ((a * 3) / 100)) + ((a * 5) / 100)) + ((a * 7) / 100)) + " VND");
+        } else {
+            alert("ko");
+        }
+
+    </script>
+</body>

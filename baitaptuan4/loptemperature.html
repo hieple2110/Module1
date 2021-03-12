@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô tả Temperature</title>
+</head>
+
+<body>
+    <script>
+
+        class Temperature {
+            constructor(doC) {
+                this.doC = doC
+            }
+
+            getdoC() {
+                return this.doC
+            }
+            chuyenF() {
+                return 1.8 * this.doC + 32;
+            }
+
+            chuyenK() {
+                return this.doC + 273.15;
+            }
+            setdoC() {
+                this.doC = doC;
+            }
+        }
+
+        let num = +prompt("nhập nhiệt độ cần chuyển");
+        let temp = new Temperature(num);
+        while (temp.getdoC() <= -273) {
+            num = +prompt("nhập lại nhiệt độ");
+            temp.setdoC(num);
+        }
+
+        alert("Độ F: " + temp.chuyenF());
+
+        alert("Độ k: " + temp.chuyenK());
+
+
+
+    </script>
+</body>
+
+</html>

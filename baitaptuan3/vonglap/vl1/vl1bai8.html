@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="doan()">Chơi</button>
+
+    <script>
+
+        function doan() {
+            while (true) {
+                let num = +prompt("mời bạn cùng đoán số");
+                let ran = Math.round(Math.random() * 100);
+                console.log(ran)
+
+                if (num == ran) {
+                    alert("chúc mừng bạn đã chiến thắng");
+                    break;
+                } else if (num < ran || num > ran) {
+                    alert("xin lỗi; bạn chưa đoán đúng");
+
+                }
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

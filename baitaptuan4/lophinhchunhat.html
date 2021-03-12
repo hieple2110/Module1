@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp hình chữ nhật</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="700px" height="300px" style="border:1px solid black;">
+        <script>
+
+            class Rectangular {
+
+                constructor(withd, hieght) {
+                    this.withd = withd;
+                    this.hieght = hieght;
+                }
+                getPerimeter() {
+                    return (this.withd + this.hieght) * 2;
+                }
+                getArea() {
+                    return this.withd * this.hieght;
+                }
+
+                rectangle() {
+                    let c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.fillStyle = "yellow";
+                    ctx.fillRect(200, 50, 250, 200);
+                }
+            }
+            let rec = new Rectangular(300, 300,);
+            rec.getArea();
+            console.log("diện tích: " + rec.getArea())
+            rec.getPerimeter();
+            console.log("chu vi: " + rec.getPerimeter())
+            rec.rectangle();
+
+
+        </script>
+</body>
+
+</html>

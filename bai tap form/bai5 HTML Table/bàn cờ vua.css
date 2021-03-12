@@ -1,0 +1,8 @@
+.BC{
+    width: 600px;
+    height: 600px;
+    border-collapse: collapse;
+    border: chartreuse 15px solid;
+    border-right: chartreuse;
+    border-bottom: chartreuse;
+    background-color: greenyellow;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện hàm1 bài 5</title>
+</head>
+
+<body>
+    <script>
+        let search = prompt("nhập ngôi sao cần tìm");
+
+        function tim(inputValue) {
+            let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            let flag = false;
+            for (let i = 0; i < ngoisao.length; i++) {
+                if (inputValue == ngoisao[i]) {
+                    alert(ngoisao[i] + " thuộc chòm sao " + chomsao[i]);
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == false) {
+                alert("Ngôi sa0 này không tìm thấy");
+            }
+        }
+        tim(search);
+
+    </script>
+</body>
+
+</html>

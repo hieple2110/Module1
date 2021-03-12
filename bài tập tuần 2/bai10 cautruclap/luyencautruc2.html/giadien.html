@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gia điện</title>
+</head>
+
+<body>
+    <script>
+        let chisocu = +prompt("nhập chỉ số cũ");
+        let chisomoi = +prompt("nhập chỉ số mới");
+        let tieuthu = chisomoi - chisocu;
+        if (tieuthu <= 100) {
+            alert("Thanh toán: " + tieuthu * 1000 + " sVND");
+        } else if (tieuthu > 100 && tieuthu <= 150) {
+            alert("Thanh toán: " + ((tieuthu * 1000) + (tieuthu * 1200)) + " VND");
+        } else if (tieuthu > 150 && tieuthu <= 200) {
+            alert("Thanh toán: " + ((tieuthu * 1000) + (tieuthu * 1200) + (tieuthu * 2000)) + " VND");
+        } else {
+            alert("Thanh toán: " + ((tieuthu * 1000) + (tieuthu * 1200) + (tieuthu * 2000) + (tieuthu * 2500)) + " VND");
+        }
+    </script>
+</body>
+
+</html>

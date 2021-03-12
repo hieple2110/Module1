@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+
+<body>
+    Năm: <input type="number" id="nam"><br>
+    <button onclick="kiemtra()">Kết quả</button>
+    <span id="result"></span>
+    <script>
+        function kiemtra() {
+            let nam = document.getElementById("nam").value;
+            let nhuan = nam % 4 == 0;
+            if (nam % 4 === 0 && nam % 100 !== 0) {
+                document.getElementById("result").innerHTML = ("Năm nhuận");
+            }
+            else if (nam % 100 === 0 && nam % 400 !== 0) {
+                document.getElementById("result").innerHTML = ("Không phải Năm nhuận");
+            }
+            else if (nam % 100 === 0 && nam % 400 === 0) {
+                document.getElementById("result").innerHTML = ("Năm nhuận");
+            }
+            else { document.getElementById("result").innerHTML = ("Không phải Năm nhuận"); }
+        }
+
+    </script>
+</body>
+
+</html>

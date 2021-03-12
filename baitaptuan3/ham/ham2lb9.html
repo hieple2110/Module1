@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện hàm2 bài 9</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arr = ["4", "5", "4", "r", "t", "e", "e"];
+        function timsoluong(a) {
+
+            let count = 0;
+            let flag = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (a == arr[i]) {
+                    flag = true;
+                    count++;
+                }
+            }
+            alert("xuât hiện " + count + " lần");
+            return flag;
+        }
+        let text = prompt("nhập");
+        if (timsoluong(text) == false) {
+            alert(" -1");
+        } else {
+            alert(" xuất hiện trong mảng");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me</title>
+</head>
+
+<body>
+    <h1>Do you love me ?</h1>
+    <h5 id="hu"></h5>
+    <button onclick="dongy()">Yes</button>
+    <button onmouseover="khong()" id="chay" style="position: absolute; left: auto;top: auto;">No</button>
+    <script>
+        function dongy() {
+            document.getElementById("hu").innerHTML = ("I love you too <3");
+        }
+        function khong() {
+            let cao = window.innerHeight;
+            let dai = window.innerWidth;
+            let gioihancao = Math.random() * cao
+            let gioihandai = Math.random() * dai
+            document.getElementById("chay").style.left = gioihandai + "px";
+            document.getElementById("chay").style.top = gioihancao + "px";
+        }
+    </script>
+</body>
+
+</html>

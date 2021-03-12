@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyển nhiệt độ</title>
+</head>
+
+<body>
+    <h1>Temperature Converter</h1>
+    <h4>Type a value in the Fahrenheit field to converter the value to Celcius:</h4>
+    <p>Fahrenheit: <input id="nhap" type="number"></p>
+    <div>
+        <button onclick=" chuyen()">Convert</button>
+        <span id="ketqua"></span>
+    </div>
+
+    <script>
+        function chuyen() {
+            let F = document.getElementById("nhap").value;
+            let C = (F - 32) / 1.8;
+            document.getElementById("ketqua").innerHTML = "Celcius: " + C;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

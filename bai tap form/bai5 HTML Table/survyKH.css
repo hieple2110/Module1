@@ -1,0 +1,15 @@
+.KH{
+    border-style: solid;
+    width: 700px;
+    background-color: rgb(217, 233, 180);
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 15px rgb(1, 231, 59);
+    blur-radius: 10px;
+}
+#BA {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    
+}

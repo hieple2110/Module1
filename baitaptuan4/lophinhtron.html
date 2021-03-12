@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp hình tròn</title>
+</head>
+
+<body>
+    <script>
+
+        // function Circle(radius, color) {
+        //     this.radius = radius;
+        //     this.color = color;
+        //     this.getRadius = function () {
+        //         return this.radius;
+        //     }
+        //     this.getArea = function () {
+        //         return Math.pow(this.radius, 2) * Math.PI;
+        //     }
+
+        // }
+
+
+
+        class Circle {
+            constructor(radius, color) {
+                this.radius = Math.random(radius) * 100;
+                this.color = color;
+            }
+            getRadius() {
+                return this.radius;
+            }
+
+            getrender() {
+                let c = document.getElementById("myCanvas");
+                let ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(40, 50, 30, 0, 2 * Math.PI);
+                ctx.fillStyle = "red";
+
+            }
+
+        }
+        let cir = new Circle(30, "pink");
+        cir.getrender();
+        // console.log("Diện tích hình tròn: " + area);
+
+    </script>
+</body>
+
+</html>

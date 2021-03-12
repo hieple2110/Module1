@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện chuột</title>
+</head>
+
+<body>
+    <img id="anh" src="./anh/bong1.jpg">
+    <p>Click button below to move the image to right</p>
+    <button onclick="moveRight()">Click Go!</button>
+    <button onclick="moveLeft()">Click Back!</button>
+    <button onclick="moveUp()">Click Up!</button>
+    <button onclick="moveDow()">Click Dow!</button>
+    <script>
+        let bong = null;
+        bong = document.getElementById("anh");
+        function init() {
+            bong.style.position = 'relative';
+            bong.style.left = '0px';
+            bong.style.top = '0px';
+        }
+        function moveRight() {
+            bong.style.left = parseInt(bong.style.left) + 20 + "px";
+        }
+        function moveLeft() {
+            bong.style.left = parseInt(bong.style.left) - 10 + "px";
+        }
+        function moveUp() {
+            bong.style.top = parseInt(bong.style.top) - 20 + "px";
+        }
+        function moveDow() {
+            bong.style.top = parseInt(bong.style.top) + 10 + "px";
+        }
+        window.load = init();
+
+    </script>
+</body>
+
+</html>

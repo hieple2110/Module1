@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="switchButton()">Switch</button>
+    <button id="btn" onclick="charge()">Charge</button>
+    <p id="status"></p>
+    <p id="battery"></p>
+    <script>
+        class FlashLamp {
+            constructor(status) {
+                this.status = status;
+            }
+            turnOn() {
+                if (this.status == false) {
+                    this.status = true;
+                }
+            }
+            turnOff() {
+                if (this.status == true) {
+                    this.status = false;
+                }
+            }
+            getBatteryInfo(battery) {
+                return battery.getEnergy();
+            }
+            setBattery(battery) {
+                battery.setEnergy();
+            }
+            light(battery) {
+                battery.decreaseEnergy();
+            }
+        }
+        class Battery {
+            constructor(energy) {
+                this.energy = energy;
+            }
+            setEnergy() {
+                this.energy = 100;
+            }
+            getEnergy() {
+                return this.energy;
+            }
+            decreaseEnergy() {
+                this.energy -= 10;
+            }
+        }
+        let energy = 100;
+        let status = false;
+        let flashLamp = new FlashLamp(status);
+        let battery = new Battery(energy);
+        document.getElementById("status").innerHTML = "Not Lighting";
+        document.getElementById("battery").innerHTML = "Battery percent: " + flashLamp.getBatteryInfo(battery) + "%";
+        function switchButton() {
+            if (battery.getEnergy() < 10) {
+                document.getElementById("battery").innerHTML = "Low battery";
+            } else {
+                if (status) {
+                    flashLamp.turnOff();
+                    status = false;
+                    document.getElementById("status").innerHTML = "Not Lighting";
+                } else {
+                    flashLamp.turnOn();
+                    flashLamp.light(battery);
+                    status = true;
+                    document.getElementById("status").innerHTML = "Lighting";
+                    document.getElementById("battery").innerHTML = "Battery percent: " + flashLamp.getBatteryInfo(battery) + "%";
+                }
+            }
+        }
+        function charge() {
+            flashLamp.setBattery(battery);
+            document.getElementById("battery").innerHTML = "Battery percent: " + flashLamp.getBatteryInfo(battery) + "%";
+        }
+    </script>
+</body>
+
+</html>

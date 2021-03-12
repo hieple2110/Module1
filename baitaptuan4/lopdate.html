@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp date</title>
+</head>
+
+<body>
+    <script>
+        function Date(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return this.month;
+            }
+            this.getYear = function () {
+                return this.year;
+            }
+            this.setDay = function (day) {
+                this.day = day;
+            }
+            this.setMonth = function (month) {
+                this.month = month;
+            }
+            this.setYear = function (year) {
+                this.year = year;
+            }
+            this.toString = function () {
+                return date.getDay() + "/" + date.getMonth() + "/" + date.getYear();
+            }
+        }
+        let date = new Date(20, 7, 2020);
+        console.log(date);
+        let day = date.getDay();
+        console.log(day);
+        let month = date.getMonth();
+        console.log(month);
+        let year = date.getYear();
+        console.log(year);
+
+
+
+        date.setDay(21);
+        date.setMonth(10);
+        date.setYear(2020);
+
+        document.write(date.toString())
+    </script>
+</body>
+
+</html>

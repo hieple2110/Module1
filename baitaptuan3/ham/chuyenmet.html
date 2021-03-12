@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyển met-feet</title>
+</head>
+<style>
+    p {
+        width: 20%;
+    }
+</style>
+
+<body>
+    <h2>Convert Length </h2>
+    <div style="display: inline-block;">
+        <span>Met:</span>
+        <input id="met" type="number">
+        <span>Feet:</span>
+        <input id="feet" type="number">
+    </div>
+    <div>
+        <button style="margin-left: 33px;" onclick=" feetmet()">Conver</button>
+        <button style="margin-left: 152px;" onclick="metfeet()">Conver</button>
+    </div>
+    <script>
+        function metfeet() {
+            let met = document.getElementById("met").value;
+            let feet = document.getElementById("feet").value;
+            met = feet * 0.305;
+            document.getElementById("met").value = met;
+        }
+        function feetmet() {
+            let met = document.getElementById("met").value;
+            let feet = document.getElementById("feet").value;
+            feet = met * 3.279;
+            document.getElementById("feet").value = feet;
+        }
+    </script>
+</body>
+
+</html>

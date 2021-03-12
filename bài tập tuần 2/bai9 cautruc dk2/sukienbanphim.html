@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+
+<body onload="docReady()">
+    <img id="bay" src="./anh/sieunhan1.jpg" style="position:absolute;left:0; top:0;" height="400" width="240" />
+    <script>
+        function upArrowPressed() {
+            console.log("lên")
+
+            let len = document.getElementById("bay");
+            len.style.top = parseInt(len.style.top) - 5 + "px";
+        }
+        function dowArrowPressed() {
+            console.log("xuôgs")
+            let len = document.getElementById("bay");
+            len.style.top = parseInt(len.style.top) + 5 + "px";
+        }
+        function leftArrowPressed() {
+            console.log("trái")
+            let len = document.getElementById("bay");
+            len.style.left = parseInt(len.style.left) - 5 + "px";
+        }
+        function rightArrowPressed() {
+            console.log("phải")
+
+            let len = document.getElementById("bay");
+            len.style.left = parseInt(len.style.left) + 5 + "px";
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftArrowPressed();
+                    break;
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 39:
+                    rightArrowPressed();
+                    break;
+                case 40:
+                    dowArrowPressed();
+                    break;
+            }
+        }
+
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+
+</html>

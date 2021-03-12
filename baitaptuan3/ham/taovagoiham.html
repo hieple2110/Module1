@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và gọi hàm</title>
+</head>
+
+<body>
+    <script>
+        function processConfirm(answer) {
+            {
+                if (answre) {
+                    let result = "";
+                    result = "Hợp lý. Trăm năm độc bại không đối thủ!!";
+                } else {
+                    result = "Thiên thời  phải chờ cao nhân!!";
+                }
+            }
+            return result;
+        }
+        let confirmAnswer = confirm("Nào!! Thư hùng một trận ??");
+        let theAnswer = processConfirm(confirmAnswer);
+        alert(confirmAnswer);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tra đối xứng</title>
+</head>
+
+<body>
+    <script>
+        function i0sPalindrome(s) {
+            // array = [o,i,u,i,o]
+            if (s[0] == s[s.length - 1]) {
+                s = s.substring(1, s.length - 1);
+                if (s.length == 1 || s.length == 0) {
+                    return true;
+                } else {
+                    return isPalindrome(s);
+                }
+            } else {
+                return false;
+            }
+        }
+        let x = prompt("Nhập chuỗi");
+        let y = isPalindrome(x);
+        if (y == true) {
+            alert("mảng đối xứng");
+        } else {
+            alert("mảng không đối xứng");
+        }
+    </script>s
+</body>
+
+</html>

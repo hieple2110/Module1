@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TRÁI TIM</title>
+</head>
+
+<body>
+
+    <script>
+
+        let row = 6;
+        let colum = 7;
+
+        function heart(row, colum) {
+
+            for (let i = 1; i <= row; i++) {
+                for (let j = 1; j <= colum; j++) {
+                    if (((i == 1) && (j == 1 || j == 4 || j == 7))
+                        || ((i == 4) && (j == 1 || j == 7))
+                        || ((i == 5) && (j == 1 || j == 2 || j == 6 || j == 7))
+                        || ((i == 6) && (j !== 4))) {
+                        document.write("&nbsp;&nbsp;&nbsp");
+                    } else {
+                        document.write("<i class='fa fa-gratipay'></i>");
+                    }
+                } document.write("<br>");
+            }
+
+        }
+        heart(row, colum);
+
+    </script>
+</body>
+
+</html>

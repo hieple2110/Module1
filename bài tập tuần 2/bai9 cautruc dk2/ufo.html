@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO</title>
+</head>
+
+<body onload="docReady()">
+    <img id="diabay" src="./anh/ufo.jpg" style="position: absolute; left:0; top:0;" height="450" width="400">
+</body>
+<script>
+    function upArrowPressed() {
+        console.log("sfsf")
+        let ufo = document.getElementById("diabay");
+        ufo.style.top = parseInt(ufo.style.top) - 10 + "px";
+    }
+    function dowArrowPressed() {
+        console.log("sfsf")
+
+        let ufo = document.getElementById("diabay");
+        ufo.style.top = parseInt(ufo.style.top) + 10 + "px";
+    }
+    function leftArrowPressed() {
+        console.log("sfsf")
+
+        let ufo = document.getElementById("diabay");
+        ufo.style.left = parseInt(ufo.style.left) - 10 + "px";
+    }
+    function rightArrowPressed() {
+        console.log("sfsf")
+
+        let ufo = document.getElementById("diabay");
+        ufo.style.left = parseInt(ufo.style.left) + 10 + "px";
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 40:
+                dowArrowPressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+
+</html>

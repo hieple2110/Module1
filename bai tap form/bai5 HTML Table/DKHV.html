@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dkHV</title>
+</head>
+<style>
+    #table1 {
+        background-color: rgb(250, 246, 24);
+    }
+
+    .hv {
+        background-color: deepskyblue;
+    }
+
+    body {
+        background-color: rgb(241, 240, 229);
+    }
+</style>
+
+<body>
+    <table id="table1">
+        <tr>
+            <td class="hv" colspan="2">Đăng ký học viên</td>
+        </tr>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" name="ten"></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td><input type="radio" name="gender" value="Nam" checked> Nam
+                <input type="radio" name="gender" value="Nữ"> Nữ</td>
+        </tr>
+        <tr>
+            <td>
+                <div style="margin-top: -29px;"></div>Dia chi</div>
+            </td>
+            <td><textarea rows="3" cols="50">
+            so 123 kiet 18
+            duong le quang dao
+            phuong an tay
+            thanh pho hue
+            tinh thua thien hue
+        </textarea><br></td>
+        </tr>
+        <tr>
+            <td>Lop</td>
+            <td><select>
+                    <option value="Chon lop">Chon lop</option>
+                    <option value="Toan">Toan</option>
+                    <option value="Ly">Ly</option>
+                    <option value="Hoa">Hoa</option>
+                    <option value="Anh van">Anh van</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"><br></td>
+        </tr>
+        <tr>
+            <td>Dien thoai</td>
+            <td><input type="text" name="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Dang ky">
+                <input type="reset" value="Nhap lai"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
